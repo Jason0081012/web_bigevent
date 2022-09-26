@@ -41,7 +41,8 @@ $(function () {
       url: '/api/reguser',
       data: {
         username: $('#form-reg [name="username"]').val(),
-        password: $('#form-reg [name="password"]').val()
+        password: $('#form-reg [name="password"]').val(),
+        repassword: $('#form-reg [name="repassword"]').val()
       },
       success: function (res) {
         if (res.status !== 0) return layer.msg(res.message)
